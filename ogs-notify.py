@@ -1,3 +1,5 @@
+#!/data/data/com.termux/files/usr/bin/python3
+
 # Thanks to https://github.com/flovo/ogs_api and
 # https://forums.online-go.com/t/api-for-notifications-about-new-moves/20264/7
 

@@ -18,7 +18,7 @@ downloading the script:
 
 Download script and make it executable.
 
-    wget https://github.com/waldeinburg/termux-ogs-notify/blob/main/ogs-notify.py
+    wget https://raw.githubusercontent.com/waldeinburg/termux-ogs-notify/main/ogs-notify.py
     chmod +x ogs-notify.py
 
 In a browser, log in to [OGS](https://online-go.com) and visit

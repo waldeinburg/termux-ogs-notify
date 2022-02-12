@@ -65,15 +65,17 @@ def keep_alive():
 
 def notification_handler(game):
     gid = game['id']
+    # Crash if gid is not a number (injection risk below)
+    int(gid)
     mn = game['move_number']
     if gid not in game_move_numbers or game_move_numbers[gid] != mn:
         game_move_numbers[gid] = mn
         print("Game id {}, new move number {}".format(gid, mn))
         if game['player_to_move'] == player_id:
             print("Notify my turn!")
-            open_game = "termux-open-url 'https://online-go.com/game/{}'".format(gid)
-            os.system("termux-notification -t 'Your turn!' -c 'Game: {}' --action '{}'"
-                      .format(game['name'], open_game))
+            os.system("termux-notification -t 'Your turn!' -c 'Game: {}' --action='termux-open-url "
+                      "https://online-go.com/game/{}'"
+                      .format(game['name'], gid))
     else:
         print("Game id {} unchanged".format(gid))
 

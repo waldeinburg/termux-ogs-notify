@@ -60,7 +60,7 @@ def reconnect():
 def keep_alive():
     while True:
         sio.emit("net/ping")
-        sio.sleep(20)
+        sio.sleep(15)
 
 
 def notification_handler(game):

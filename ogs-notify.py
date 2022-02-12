@@ -18,7 +18,7 @@ def get_auth():
             if len(lines) != 2:
                 raise ValueError("Not 2 lines in {}".format(auth_file))
             return [int(lines[0]),
-                    lines[1]]
+                    lines[1].strip()]
     except Exception as e:
         print(e)
         print("Cannot read authentication. To fix:")

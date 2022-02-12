@@ -73,7 +73,7 @@ def notification_handler(game):
         print("Game id {}, new move number {}".format(gid, mn))
         if game['player_to_move'] == player_id:
             print("Notify my turn!")
-            os.system("termux-notification -t 'Your turn!' -c 'Game: {}' --action='termux-open-url "
+            os.system("termux-notification -t 'Your turn!' -c 'Game: {}' --action='termux-open "
                       "https://online-go.com/game/{}'"
                       .format(game['name'], gid))
     else:

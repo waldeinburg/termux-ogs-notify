@@ -22,8 +22,8 @@ Download script and make it executable.
     chmod +x ogs-notify.py
 
 In a browser, log in to [OGS](https://online-go.com) and visit
-[https://online-go.com/api/v1/ui/config]. This will display a JSON file. You will need the `user.id`
-and `notification_auth` keys:
+https://online-go.com/api/v1/ui/config. This will display a JSON file. You will need the `user.id`
+and `notification_auth` values:
 
     ...
     "user": {
